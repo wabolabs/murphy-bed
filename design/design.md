@@ -426,14 +426,26 @@ python3 murphy_bed_3d.py step  # STEP only
 ## File Index
 
 ```
-design/
-├── design.md                  ← This document
-├── design.html                ← HTML version for browser viewing
-└── diagrams/
-    ├── assembly.svg            Figure 1 — Overall assembly
-    ├── panels.svg              Figure 2 — Panel cutting guide
-    ├── mounting.svg            Figure 3 — Bracket mounting detail (replaces adapter.svg)
-    ├── exploded.svg            Figure 4 — Exploded view
-    ├── ceiling.svg             Figure 5 — Ceiling recess framing
-    └── bed-open.svg            Figure 6 — Bed in open position
+murphy-bed/
+├── README.md                  ← Repo overview
+├── LICENSE                    ← MIT
+├── ref/                       ← Original PDFs (VEVOR kit manual, IKEA MALM instructions)
+│   ├── (BAGUO)SKU6-MurphyBedKit-...
+│   └── malm-bed-frame-black-brown__AA-740446-8-2.pdf
+└── design/
+    ├── design.md              ← This document
+    ├── design.html            ← HTML version for browser viewing
+    ├── diagrams/
+    │   ├── assembly.svg       Figure 1 — Overall assembly
+    │   ├── panels.svg         Figure 2 — Panel cutting guide
+    │   ├── mounting.svg       Figure 3 — Bracket mounting detail
+    │   ├── exploded.svg       Figure 4 — Exploded view
+    │   ├── ceiling.svg        Figure 5 — Ceiling recess framing
+    │   └── bed-open.svg       Figure 6 — Bed in open position
+    └── 3d/
+        ├── murphy_bed_3d.py   CadQuery Python script
+        ├── viewer.html        Three.js web viewer
+        ├── manifest.json      Part manifest
+        ├── stl/               Individual STL files (27 per configuration)
+        └── step/              Individual STEP files
 ```

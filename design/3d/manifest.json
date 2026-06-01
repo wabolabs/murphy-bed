@@ -1,0 +1,272 @@
+[
+  {
+    "name": "open_floor",
+    "label": "Floor",
+    "group": "room",
+    "color": "#8a7060",
+    "stl": "stl/open_floor.stl",
+    "step": "step/open_floor.step",
+    "size_stl": 684,
+    "size_step": 15800
+  },
+  {
+    "name": "open_wall",
+    "label": "Wall",
+    "group": "room",
+    "color": "#e6e0d6",
+    "stl": "stl/open_wall.stl",
+    "step": "step/open_wall.step",
+    "size_stl": 684,
+    "size_step": 15655
+  },
+  {
+    "name": "open_ceiling",
+    "label": "Ceiling",
+    "group": "room",
+    "color": "#d0d0d0",
+    "stl": "stl/open_ceiling.stl",
+    "step": "step/open_ceiling.step",
+    "size_stl": 1684,
+    "size_step": 29891
+  },
+  {
+    "name": "open_cab_side_L",
+    "label": "Left Side (OSB)",
+    "group": "cabinet",
+    "color": "#8c6632",
+    "stl": "stl/open_cab_side_L.stl",
+    "step": "step/open_cab_side_L.step",
+    "size_stl": 684,
+    "size_step": 15613
+  },
+  {
+    "name": "open_cab_side_R",
+    "label": "Right Side (OSB)",
+    "group": "cabinet",
+    "color": "#8c6632",
+    "stl": "stl/open_cab_side_R.stl",
+    "step": "step/open_cab_side_R.step",
+    "size_stl": 684,
+    "size_step": 15587
+  },
+  {
+    "name": "open_cab_back",
+    "label": "Back Panel (OSB)",
+    "group": "cabinet",
+    "color": "#7a6b50",
+    "stl": "stl/open_cab_back.stl",
+    "step": "step/open_cab_back.step",
+    "size_stl": 684,
+    "size_step": 15637
+  },
+  {
+    "name": "open_cab_top",
+    "label": "Top (OSB)",
+    "group": "cabinet",
+    "color": "#8c6632",
+    "stl": "stl/open_cab_top.stl",
+    "step": "step/open_cab_top.step",
+    "size_stl": 684,
+    "size_step": 15706
+  },
+  {
+    "name": "open_cab_bottom",
+    "label": "Bottom (OSB)",
+    "group": "cabinet",
+    "color": "#8c6632",
+    "stl": "stl/open_cab_bottom.stl",
+    "step": "step/open_cab_bottom.step",
+    "size_stl": 684,
+    "size_step": 15550
+  },
+  {
+    "name": "open_cab_shelf",
+    "label": "Shelf (OSB)",
+    "group": "cabinet",
+    "color": "#8c6632",
+    "stl": "stl/open_cab_shelf.stl",
+    "step": "step/open_cab_shelf.step",
+    "size_stl": 684,
+    "size_step": 15619
+  },
+  {
+    "name": "open_bracket_A_L",
+    "label": "Side Bracket (A)",
+    "group": "mechanism",
+    "color": "#888888",
+    "stl": "stl/open_bracket_A_L.stl",
+    "step": "step/open_bracket_A_L.step",
+    "size_stl": 684,
+    "size_step": 15654
+  },
+  {
+    "name": "open_bracket_A_R",
+    "label": "Side Bracket (A)",
+    "group": "mechanism",
+    "color": "#888888",
+    "stl": "stl/open_bracket_A_R.stl",
+    "step": "step/open_bracket_A_R.step",
+    "size_stl": 684,
+    "size_step": 15628
+  },
+  {
+    "name": "open_bed",
+    "label": "Malm Frame",
+    "group": "bed",
+    "color": "#b89860",
+    "stl": "stl/open_bed.stl",
+    "step": "step/open_bed.step",
+    "size_stl": 2684,
+    "size_step": 53325
+  },
+  {
+    "name": "open_mattress",
+    "label": "Mattress",
+    "group": "bed",
+    "color": "#e0d8c8",
+    "stl": "stl/open_mattress.stl",
+    "step": "step/open_mattress.step",
+    "size_stl": 684,
+    "size_step": 15955
+  },
+  {
+    "name": "open_legs",
+    "label": "Legs (C)",
+    "group": "mechanism",
+    "color": "#777777",
+    "stl": "stl/open_legs.stl",
+    "step": "step/open_legs.step",
+    "size_stl": 1284,
+    "size_step": 33651
+  },
+  {
+    "name": "stored_floor",
+    "label": "Floor",
+    "group": "room",
+    "color": "#8a7060",
+    "stl": "stl/stored_floor.stl",
+    "step": "step/stored_floor.step",
+    "size_stl": 684,
+    "size_step": 15802
+  },
+  {
+    "name": "stored_wall",
+    "label": "Wall",
+    "group": "room",
+    "color": "#e6e0d6",
+    "stl": "stl/stored_wall.stl",
+    "step": "step/stored_wall.step",
+    "size_stl": 684,
+    "size_step": 15657
+  },
+  {
+    "name": "stored_ceiling",
+    "label": "Ceiling",
+    "group": "room",
+    "color": "#d0d0d0",
+    "stl": "stl/stored_ceiling.stl",
+    "step": "step/stored_ceiling.step",
+    "size_stl": 1684,
+    "size_step": 29893
+  },
+  {
+    "name": "stored_cab_side_L",
+    "label": "Left Side (OSB)",
+    "group": "cabinet",
+    "color": "#8c6632",
+    "stl": "stl/stored_cab_side_L.stl",
+    "step": "step/stored_cab_side_L.step",
+    "size_stl": 684,
+    "size_step": 15615
+  },
+  {
+    "name": "stored_cab_side_R",
+    "label": "Right Side (OSB)",
+    "group": "cabinet",
+    "color": "#8c6632",
+    "stl": "stl/stored_cab_side_R.stl",
+    "step": "step/stored_cab_side_R.step",
+    "size_stl": 684,
+    "size_step": 15589
+  },
+  {
+    "name": "stored_cab_back",
+    "label": "Back Panel (OSB)",
+    "group": "cabinet",
+    "color": "#7a6b50",
+    "stl": "stl/stored_cab_back.stl",
+    "step": "step/stored_cab_back.step",
+    "size_stl": 684,
+    "size_step": 15639
+  },
+  {
+    "name": "stored_cab_top",
+    "label": "Top (OSB)",
+    "group": "cabinet",
+    "color": "#8c6632",
+    "stl": "stl/stored_cab_top.stl",
+    "step": "step/stored_cab_top.step",
+    "size_stl": 684,
+    "size_step": 15708
+  },
+  {
+    "name": "stored_cab_bottom",
+    "label": "Bottom (OSB)",
+    "group": "cabinet",
+    "color": "#8c6632",
+    "stl": "stl/stored_cab_bottom.stl",
+    "step": "step/stored_cab_bottom.step",
+    "size_stl": 684,
+    "size_step": 15552
+  },
+  {
+    "name": "stored_cab_shelf",
+    "label": "Shelf (OSB)",
+    "group": "cabinet",
+    "color": "#8c6632",
+    "stl": "stl/stored_cab_shelf.stl",
+    "step": "step/stored_cab_shelf.step",
+    "size_stl": 684,
+    "size_step": 15621
+  },
+  {
+    "name": "stored_bracket_A_L",
+    "label": "Side Bracket (A)",
+    "group": "mechanism",
+    "color": "#888888",
+    "stl": "stl/stored_bracket_A_L.stl",
+    "step": "step/stored_bracket_A_L.step",
+    "size_stl": 684,
+    "size_step": 15654
+  },
+  {
+    "name": "stored_bracket_A_R",
+    "label": "Side Bracket (A)",
+    "group": "mechanism",
+    "color": "#888888",
+    "stl": "stl/stored_bracket_A_R.stl",
+    "step": "step/stored_bracket_A_R.step",
+    "size_stl": 684,
+    "size_step": 15628
+  },
+  {
+    "name": "stored_bed",
+    "label": "Malm Frame",
+    "group": "bed",
+    "color": "#b89860",
+    "stl": "stl/stored_bed.stl",
+    "step": "step/stored_bed.step",
+    "size_stl": 2684,
+    "size_step": 54006
+  },
+  {
+    "name": "stored_mattress",
+    "label": "Mattress",
+    "group": "bed",
+    "color": "#e0d8c8",
+    "stl": "stl/stored_mattress.stl",
+    "step": "step/stored_mattress.step",
+    "size_stl": 684,
+    "size_step": 16305
+  }
+]

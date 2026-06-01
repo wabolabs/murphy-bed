@@ -153,6 +153,7 @@
     <li><a href="#steps">10. Steps</a></li>
     <li><a href="#shopping">11. Shopping List</a></li>
     <li><a href="#constraints">13. Constraints</a></li>
+    <li><a href="#model">14. 3D Model</a></li>
   </ul>
 </nav>
 
@@ -567,6 +568,45 @@
 </section>
 
 <!-- ============================================================ -->
+<!-- 14. 3D MODEL -->
+<!-- ============================================================ -->
+<section id="model">
+<h2>14. 3D Model</h2>
+
+<p>A programmatic 3D model of the full assembly is available in <code>design/3d/</code>. It was generated using CadQuery (Python CAD library) and includes two configurations.</p>
+
+<h3>Open Position</h3>
+<p>Bed frame extended horizontally from the cabinet front at bed height (310 mm / 12.25 in). Shows the cabinet recessed into the ceiling, room context (floor, wall, ceiling with cutout), OSB panels with wood color, Malm bed frame, mattress, simplified brackets, gas springs, and legs touching the floor.</p>
+
+<h3>Stored Position</h3>
+<p>Bed frame rotated vertically inside the cabinet. The bed fits within the cabinet internal space with comfortable clearance (62 mm at foot, 20 mm at head).</p>
+
+<h3>Viewing</h3>
+<table>
+  <tr><th>File</th><th>Description</th></tr>
+  <tr><td><code>design/3d/viewer.html</code></td><td>Three.js web viewer &mdash; open in a browser, mouse-drag to orbit</td></tr>
+  <tr><td><code>design/3d/murphy_bed_3d.py</code></td><td>CadQuery Python script &mdash; regenerate with <code>python3 murphy_bed_3d.py</code></td></tr>
+  <tr><td><code>design/3d/stl/*.stl</code></td><td>Individual component STL files (27 parts per configuration)</td></tr>
+  <tr><td><code>design/3d/step/*.step</code></td><td>Individual component STEP files (CAD-compatible)</td></tr>
+  <tr><td><code>design/3d/manifest.json</code></td><td>Part manifest with colors and groups for the viewer</td></tr>
+</table>
+
+<h3>Views in the 3D Viewer</h3>
+<ul>
+  <li><strong>Open</strong> &mdash; assembled in open (horizontal) position</li>
+  <li><strong>Stored</strong> &mdash; assembled in stored (vertical) position</li>
+  <li><strong>Cabinet Only</strong> &mdash; just the OSB cabinet panels</li>
+  <li><strong>Exploded</strong> &mdash; components separated by group (room &rarr; cabinet &rarr; bed &rarr; mechanism)</li>
+</ul>
+
+<h3>Regenerating</h3>
+<pre><code>cd design/3d
+python3 murphy_bed_3d.py      # exports both STL and STEP
+python3 murphy_bed_3d.py stl  # STL only
+python3 murphy_bed_3d.py step # STEP only</code></pre>
+</section>
+
+<!-- ============================================================ -->
 <!-- FILE INDEX -->
 <!-- ============================================================ -->
 <section id="files">
@@ -575,13 +615,19 @@
 <span class="dir">design/</span><br>
 <span class="hl">&#x251C;&#x2500;&#x2500; design.html</span><span class="file">  &larr; this file</span><br>
 <span class="hl">&#x251C;&#x2500;&#x2500; design.md</span><span class="file">  &larr; Markdown source</span><br>
-<span class="dir">&#x2514;&#x2500;&#x2500; diagrams/</span><br>
+<span class="dir">&#x251C;&#x2500;&#x2500; diagrams/</span><br>
 <span class="file">    &#x251C;&#x2500;&#x2500; assembly.svg</span><br>
 <span class="file">    &#x251C;&#x2500;&#x2500; panels.svg</span><br>
 <span class="file">    &#x251C;&#x2500;&#x2500; mounting.svg</span><span class="file">  (replaces adapter.svg)</span><br>
 <span class="file">    &#x251C;&#x2500;&#x2500; exploded.svg</span><br>
 <span class="file">    &#x251C;&#x2500;&#x2500; ceiling.svg</span><br>
 <span class="file">    &#x2514;&#x2500;&#x2500; bed-open.svg</span><br>
+<span class="dir">&#x2514;&#x2500;&#x2500; 3d/</span><br>
+<span class="file">    &#x251C;&#x2500;&#x2500; murphy_bed_3d.py</span><br>
+<span class="file">    &#x251C;&#x2500;&#x2500; viewer.html</span><br>
+<span class="file">    &#x251C;&#x2500;&#x2500; manifest.json</span><br>
+<span class="file">    &#x251C;&#x2500;&#x2500; stl/ (27 files)</span><br>
+<span class="file">    &#x2514;&#x2500;&#x2500; step/ (27 files)</span><br>
 </div>
 </section>
 

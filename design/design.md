@@ -387,6 +387,42 @@ Verify your mattress weight before purchase. Most standard queen mattresses unde
 
 ---
 
+## 14. 3D Model
+
+A programmatic 3D model of the full assembly is available in `design/3d/`. It was generated using CadQuery (Python CAD library) and includes two configurations:
+
+### Open Position
+Bed frame extended horizontally from the cabinet front at bed height (310 mm / 12.25 in). Shows the cabinet recessed into the ceiling, room context (floor, wall, ceiling with cutout), OSB panels with OSB wood color, Malm bed frame, mattress, simplified brackets, gas springs, and legs touching the floor.
+
+### Stored Position
+Bed frame rotated vertically inside the cabinet. Same components, different configuration. The bed fits within the cabinet internal space with comfortable clearance.
+
+### Viewing
+
+| File | Description |
+|---|---|
+| `design/3d/viewer.html` | Three.js web viewer — open in a browser, mouse-drag to orbit |
+| `design/3d/murphy_bed_3d.py` | CadQuery Python script — regenerate with `python3 murphy_bed_3d.py` |
+| `design/3d/stl/*.stl` | Individual component STL files (27 parts per configuration) |
+| `design/3d/step/*.step` | Individual component STEP files (CAD-compatible) |
+| `design/3d/manifest.json` | Part manifest with colors and groups used by the viewer |
+
+### Views in the 3D Viewer
+- **Open** — assembled in open (horizontal) position
+- **Stored** — assembled in stored (vertical) position
+- **Cabinet Only** — just the OSB cabinet panels
+- **Exploded** — components separated by group (room → cabinet → bed → mechanism)
+
+### Regenerating
+```bash
+cd design/3d
+python3 murphy_bed_3d.py      # exports both STL and STEP
+python3 murphy_bed_3d.py stl  # STL only
+python3 murphy_bed_3d.py step  # STEP only
+```
+
+---
+
 ## File Index
 
 ```

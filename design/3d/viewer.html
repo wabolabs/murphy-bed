@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Murphy Bed — 3D Viewer</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #1a1a1a; color: #ccc; overflow: hidden;
+  }
+  #container { width: 100vw; height: 100vh; display: block; }
+
+  #controls {
+    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 8px; z-index: 10;
+    background: rgba(0,0,0,0.7); padding: 10px 16px;
+    border-radius: 8px; backdrop-filter: blur(4px);
+  }
+  #controls button {
+    padding: 8px 18px; border: 1px solid #555; border-radius: 6px;
+    background: #333; color: #ccc; cursor: pointer; font-size: 13px;
+    transition: all .15s;
+  }
+  #controls button:hover { background: #444; border-color: #888; }
+  #controls button.active {
+    background: #4caf50; border-color: #4caf50; color: #fff;
+  }
+  #info {
+    position: fixed; top: 12px; left: 50%; transform: translateX(-50%);
+    z-index: 10; background: rgba(0,0,0,0.6); padding: 6px 14px;
+    border-radius: 6px; font-size: 12px; color: #999;
+    pointer-events: none; white-space: nowrap;
+  }
+  #loading {
+    position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    z-index: 20; font-size: 18px; color: #888;
+  }
+  #controls .sep { width: 1px; background: #444; margin: 4px 8px; }
+</style>
+</head>
+<body>
+
+<div id="loading">Loading 3D models...</div>
+<div id="info">Drag to orbit &bull; Scroll to zoom</div>
+<div id="controls">
+  <button class="active" data-view="open">Open</button>
+  <button data-view="stored">Stored</button>
+  <div class="sep"></div>
+  <button data-view="cabinet">Cabinet Only</button>
+  <button data-view="exploded">Exploded</button>
+</div>
+<div id="container"></div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+
+// ── Setup ──
+const container = document.getElementById('container');
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x1a1a1a);
+
+const camera = new THREE.PerspectiveCamera(35, container.clientWidth / container.clientHeight, 1, 30000);
+camera.position.set(5000, 3000, 5000);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(container.clientWidth, container.clientHeight);
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+container.appendChild(renderer.domElement);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 1200, 1000);
+controls.update();
+
+// Lights
+const ambient = new THREE.AmbientLight(0x404060, 0.6);
+scene.add(ambient);
+const dirLight = new THREE.DirectionalLight(0xffffff, 1.2);
+dirLight.position.set(5000, 8000, 5000);
+scene.add(dirLight);
+const fillLight = new THREE.DirectionalLight(0x8888ff, 0.3);
+fillLight.position.set(-3000, 2000, -2000);
+scene.add(fillLight);
+
+// Grid helper
+const grid = new THREE.GridHelper(8000, 40, 0x444444, 0x333333);
+grid.position.y = 0;
+scene.add(grid);
+
+// ── State ──
+const groups = {};  // group_name → THREE.Group
+const allParts = {}; // "view_name/part_name" → { mesh, group }
+let currentView = 'open';
+
+// ── Load manifest ──
+async function loadAll() {
+  const resp = await fetch('manifest.json');
+  const manifest = await resp.json();
+
+  const loader = new STLLoader();
+
+  for (const entry of manifest) {
+    const { name, label, group, color, stl } = entry;
+    if (!stl) continue;
+
+    // Extract view prefix (open_ / stored_)
+    const viewPrefix = name.startsWith('open_') ? 'open'
+                     : name.startsWith('stored_') ? 'stored' : null;
+    const partName = viewPrefix ? name.slice(viewPrefix.length + 1) : name;
+
+    // Load STL
+    let geometry;
+    try {
+      geometry = await loader.loadAsync(stl);
+    } catch(e) {
+      console.warn('Failed to load', stl, e);
+      continue;
+    }
+
+    const mat = new THREE.MeshStandardMaterial({
+      color: color,
+      roughness: 0.6,
+      metalness: 0.1,
+      flatShading: true,
+    });
+    const mesh = new THREE.Mesh(geometry, mat);
+    mesh.userData = { label, group, partName, color };
+
+    // Store by view prefix
+    const key = viewPrefix || 'common';
+    if (!allParts[key]) allParts[key] = [];
+    allParts[key].push(mesh);
+
+    // Create view groups
+    if (!groups[viewPrefix]) groups[viewPrefix] = new THREE.Group();
+    groups[viewPrefix].add(mesh);
+  }
+
+  // Also create an "exploded" view = components spread apart
+  createExploded();
+}
+
+function createExploded() {
+  const g = new THREE.Group();
+  const cabParts = [];
+  const bedParts = [];
+  const roomParts = [];
+  const mechParts = [];
+
+  for (const mesh of (allParts['open'] || [])) {
+    const clone = mesh.clone();
+    const grp = mesh.userData.group;
+    if (grp === 'cabinet') cabParts.push(clone);
+    else if (grp === 'bed') bedParts.push(clone);
+    else if (grp === 'mechanism') mechParts.push(clone);
+    else roomParts.push(clone);
+  }
+
+  // Offset each group
+  const off = 800;
+  for (const m of roomParts) g.add(m);
+  for (const m of cabParts) { m.position.x += off; g.add(m); }
+  for (const m of bedParts) { m.position.x += off * 2; g.add(m); }
+  for (const m of mechParts) { m.position.x += off * 2.8; g.add(m); }
+
+  groups['exploded'] = g;
+}
+
+// ── Show view ──
+function showView(viewName) {
+  document.getElementById('loading').style.display = 'none';
+
+  // Clear scene (keep lights + grid)
+  while (scene.children.length > 0) {
+    const c = scene.children[0];
+    if (c.isLight || c.isGridHelper) { scene.children.push(scene.children.shift()); continue; }
+    scene.remove(c);
+  }
+
+  const g = groups[viewName];
+  if (g) {
+    scene.add(g);
+    // Auto-fit camera
+    const box = new THREE.Box3().setFromObject(g);
+    const size = box.getSize(new THREE.Vector3());
+    const center = box.getCenter(new THREE.Vector3());
+    controls.target.copy(center);
+    const maxDim = Math.max(size.x, size.y, size.z);
+    const dist = maxDim * 1.8;
+    camera.position.set(center.x + dist * 0.6, center.y + dist * 0.5, center.z + dist);
+    controls.update();
+  }
+
+  document.querySelectorAll('#controls button[data-view]').forEach(b => {
+    b.classList.toggle('active', b.dataset.view === viewName);
+  });
+
+  currentView = viewName;
+}
+
+// ── Init ──
+loadAll().then(() => {
+  showView('open');
+});
+
+// ── Controls ──
+document.querySelectorAll('#controls button[data-view]').forEach(btn => {
+  btn.addEventListener('click', () => showView(btn.dataset.view));
+});
+
+// ── Resize ──
+window.addEventListener('resize', () => {
+  const w = container.clientWidth, h = container.clientHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+});
+
+// ── Animate ──
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+  renderer.render(scene, camera);
+}
+animate();
+</script>
+</body>
+</html>

@@ -35,14 +35,41 @@
   }
   #loading {
     position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%);
-    z-index: 20; font-size: 18px; color: #888;
+    z-index: 20; font-size: 18px; color: #888; text-align: center;
   }
+  #loading .hint {
+    font-size: 13px; color: #666; margin-top: 12px; max-width: 420px;
+    line-height: 1.5;
+  }
+  #loading .hint code {
+    background: #333; padding: 2px 6px; border-radius: 3px; color: #aaa;
+  }
+  #error {
+    position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    z-index: 20; font-size: 16px; color: #f88; text-align: center;
+    background: rgba(0,0,0,0.85); padding: 32px; border-radius: 12px;
+    line-height: 1.6; display: none;
+  }
+  #error code { background: #333; padding: 2px 6px; border-radius: 3px; }
   #controls .sep { width: 1px; background: #444; margin: 4px 8px; }
 </style>
 </head>
 <body>
 
-<div id="loading">Loading 3D models...</div>
+<div id="loading">
+  Loading 3D models...
+  <div class="hint">
+    If this hangs, open via a local server instead of <code>file://</code>:<br>
+    <code>./view.sh</code> &nbsp;or&nbsp; <code>python3 -m http.server 8080</code>
+  </div>
+</div>
+<div id="error">
+  <strong>Failed to load 3D models.</strong><br>
+  Browsers block local file loads due to CORS policy.<br><br>
+  Run <code style="background:#444;padding:3px 8px;border-radius:4px">./view.sh</code> from the repo root,<br>
+  or start a local HTTP server manually:<br>
+  <code style="background:#444;padding:3px 8px;border-radius:4px">python3 -m http.server 8080</code>
+</div>
 <div id="info">Drag to orbit &bull; Scroll to zoom</div>
 <div id="controls">
   <button class="active" data-view="open">Open</button>
@@ -125,8 +152,10 @@ async function loadAll() {
     try {
       geometry = await loader.loadAsync(stl);
     } catch(e) {
+      document.getElementById('error').style.display = 'block';
+      document.getElementById('loading').style.display = 'none';
       console.warn('Failed to load', stl, e);
-      continue;
+      throw e;  // stop loading
     }
 
     const mat = new THREE.MeshStandardMaterial({

@@ -14,7 +14,15 @@ OSB cabinet + direct-bracket VEVOR kit conversion of an IKEA Malm Queen bed fram
 
 ## 3D Viewer
 
-Open `design/3d/viewer.html` in a browser to explore the model in 3D.
+```bash
+./view.sh          # starts server + opens browser
+# or manually:    python3 -m http.server 8080
+# then open:      http://localhost:8080/design/3d/viewer.html
+```
+
+Opens a Three.js viewer with the full assembly in 3D. Orbit with mouse, switch between Open / Stored / Cabinet Only / Exploded views.
+
+> Opening `design/3d/viewer.html` directly via `file://` will fail due to browser CORS policy. Use `./view.sh` to serve it locally.
 
 ## License
 

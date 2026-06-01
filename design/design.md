@@ -428,6 +428,7 @@ python3 murphy_bed_3d.py step  # STEP only
 ```
 murphy-bed/
 ├── README.md                  ← Repo overview
+├── view.sh                    ← Start 3D viewer (local HTTP server)
 ├── LICENSE                    ← MIT
 ├── ref/                       ← Original PDFs (VEVOR kit manual, IKEA MALM instructions)
 │   ├── (BAGUO)SKU6-MurphyBedKit-...

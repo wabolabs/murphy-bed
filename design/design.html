@@ -599,6 +599,13 @@
   <li><strong>Exploded</strong> &mdash; components separated by group (room &rarr; cabinet &rarr; bed &rarr; mechanism)</li>
 </ul>
 
+<h3>Launching the Viewer</h3>
+<pre><code>./view.sh          # from repo root — starts server + opens browser
+# or manually:
+python3 -m http.server 8080
+# then open http://localhost:8080/design/3d/viewer.html</code></pre>
+<p><strong>Note:</strong> Opening <code>viewer.html</code> directly via <code>file://</code> will fail due to browser CORS policy. Always serve it over HTTP.</p>
+
 <h3>Regenerating</h3>
 <pre><code>cd design/3d
 python3 murphy_bed_3d.py      # exports both STL and STEP
@@ -613,6 +620,7 @@ python3 murphy_bed_3d.py step # STEP only</code></pre>
 <h2>File Index</h2>
 <div class="file-tree">
 <span class="hl">&#x251C;&#x2500;&#x2500; README.md</span><span class="file">  &larr; Repo overview</span><br>
+<span class="hl">&#x251C;&#x2500;&#x2500; view.sh</span><span class="file">  &larr; Start 3D viewer</span><br>
 <span class="hl">&#x251C;&#x2500;&#x2500; LICENSE</span><span class="file">  &larr; MIT</span><br>
 <span class="hl">&#x251C;&#x2500;&#x2500; .gitignore</span><br>
 <span class="dir">&#x251C;&#x2500;&#x2500; ref/</span><br>

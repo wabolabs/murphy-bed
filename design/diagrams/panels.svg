@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%">
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; }
+      .dim { fill: #d32f2f; font-size: 11px; text-anchor: middle; }
+      .dim2 { fill: #1565c0; font-size: 11px; text-anchor: middle; }
+      .label { font-size: 10px; fill: #333; }
+      .title { font-size: 16px; fill: #333; font-weight: bold; }
+      .subtitle { font-size: 12px; fill: #555; }
+    </style>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6Z" fill="#d32f2f"/>
+    </marker>
+    <marker id="arr2" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <path d="M0,0 L6,2 L0,4Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+
+  <text x="600" y="28" text-anchor="middle" class="title">Cabinet Panel Cutting Guide — OSB Panels</text>
+  <text x="600" y="46" text-anchor="middle" class="subtitle">External dimensions: 66.5 in W × 16 in D × 84.25 in H (1690 × 406 × 2138 mm)</text>
+
+  <!-- Panel 1: Left Side -->
+  <g transform="translate(60,70)">
+    <text x="90" y="12" class="label" font-weight="bold">1 — Left Side Panel</text>
+    <rect x="40" y="20" width="160" height="480" fill="#d4a76a" stroke="#333" stroke-width="1.5" rx="3"/>
+    <line x1="40" y1="20" x2="200" y2="500" stroke="#d4a76a" stroke-width="0.5" stroke-dasharray="4,2"/>
+    <line x1="200" y1="20" x2="40" y2="500" stroke="#d4a76a" stroke-width="0.5" stroke-dasharray="4,2"/>
+    <line x1="40" y1="145" x2="200" y2="145" stroke="#888" stroke-width="0.5" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
+    <text x="120" y="140" class="dim2">16 in (406 mm)</text>
+    <line x1="30" y1="20" x2="30" y2="500" stroke="#888" stroke-width="0.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+    <text x="20" y="265" class="dim" transform="rotate(-90,20,265)">84.25 in (2138 mm)</text>
+    <text x="120" y="530" class="label" fill="#555">Material: 3/4 in (18 mm) OSB</text>
+  </g>
+
+  <!-- Panel 2: Right Side -->
+  <g transform="translate(310,70)">
+    <text x="90" y="12" class="label" font-weight="bold">2 — Right Side Panel</text>
+    <rect x="40" y="20" width="160" height="480" fill="#d4a76a" stroke="#333" stroke-width="1.5" rx="3"/>
+    <line x1="40" y1="20" x2="200" y2="500" stroke="#d4a76a" stroke-width="0.5" stroke-dasharray="4,2"/>
+    <line x1="200" y1="20" x2="40" y2="500" stroke="#d4a76a" stroke-width="0.5" stroke-dasharray="4,2"/>
+    <line x1="40" y1="145" x2="200" y2="145" stroke="#888" stroke-width="0.5" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
+    <text x="120" y="140" class="dim2">16 in (406 mm)</text>
+    <line x1="30" y1="20" x2="30" y2="500" stroke="#888" stroke-width="0.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+    <text x="20" y="265" class="dim" transform="rotate(-90,20,265)">84.25 in (2138 mm)</text>
+    <text x="120" y="530" class="label" fill="#555">Material: 3/4 in (18 mm) OSB</text>
+  </g>
+
+  <!-- Panel 3: Top -->
+  <g transform="translate(560,70)">
+    <text x="120" y="12" class="label" font-weight="bold">3 — Top Panel</text>
+    <rect x="20" y="20" width="260" height="100" fill="#d4a76a" stroke="#333" stroke-width="1.5" rx="3"/>
+    <line x1="20" y1="20" x2="280" y2="120" stroke="#d4a76a" stroke-width="0.5" stroke-dasharray="4,2"/>
+    <line x1="280" y1="20" x2="20" y2="120" stroke="#d4a76a" stroke-width="0.5" stroke-dasharray="4,2"/>
+    <line x1="20" y1="75" x2="280" y2="75" stroke="#888" stroke-width="0.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+    <text x="150" y="70" class="dim">65.1 in (1654 mm)</text>
+    <line x1="15" y1="20" x2="15" y2="120" stroke="#888" stroke-width="0.5" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
+    <text x="8" y="75" class="dim2" transform="rotate(-90,8,75)">15.3 in (388 mm)</text>
+    <text x="150" y="155" class="label" fill="#555">Material: 3/4 in (18 mm) OSB</text>
+  </g>
+
+  <!-- Panel 4: Bottom -->
+  <g transform="translate(560,240)">
+    <text x="120" y="12" class="label" font-weight="bold">4 — Bottom Panel</text>
+    <rect x="20" y="20" width="260" height="110" fill="#d4a76a" stroke="#333" stroke-width="1.5" rx="3"/>
+    <line x1="20" y1="20" x2="280" y2="130" stroke="#d4a76a" stroke-width="0.5" stroke-dasharray="4,2"/>
+    <line x1="280" y1="20" x2="20" y2="130" stroke="#d4a76a" stroke-width="0.5" stroke-dasharray="4,2"/>
+    <line x1="20" y1="80" x2="280" y2="80" stroke="#888" stroke-width="0.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+    <text x="150" y="75" class="dim">65.1 in (1654 mm)</text>
+    <line x1="15" y1="20" x2="15" y2="130" stroke="#888" stroke-width="0.5" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
+    <text x="8" y="80" class="dim2" transform="rotate(-90,8,80)">16 in (406 mm)</text>
+    <text x="150" y="165" class="label" fill="#555">Material: 3/4 in (18 mm) OSB</text>
+  </g>
+
+  <!-- Panel 5: Shelf -->
+  <g transform="translate(560,430)">
+    <text x="120" y="12" class="label" font-weight="bold">5 — Interior Shelf</text>
+    <rect x="20" y="20" width="260" height="100" fill="#d4a76a" stroke="#333" stroke-width="1.5" rx="3"/>
+    <line x1="20" y1="20" x2="280" y2="120" stroke="#d4a76a" stroke-width="0.5" stroke-dasharray="4,2"/>
+    <line x1="280" y1="20" x2="20" y2="120" stroke="#d4a76a" stroke-width="0.5" stroke-dasharray="4,2"/>
+    <line x1="20" y1="75" x2="280" y2="75" stroke="#888" stroke-width="0.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+    <text x="150" y="70" class="dim">65.1 in (1654 mm)</text>
+    <line x1="15" y1="20" x2="15" y2="120" stroke="#888" stroke-width="0.5" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
+    <text x="8" y="75" class="dim2" transform="rotate(-90,8,75)">15.3 in (388 mm)</text>
+    <text x="150" y="155" class="label" fill="#555">Material: 3/4 in (18 mm) OSB</text>
+  </g>
+
+  <!-- Panel 6: Back -->
+  <g transform="translate(60,590)">
+    <text x="120" y="12" class="label" font-weight="bold">6 — Back Panel</text>
+    <rect x="20" y="20" width="350" height="60" fill="#dbcca8" stroke="#333" stroke-width="1.5" rx="3"/>
+    <line x1="20" y1="55" x2="370" y2="55" stroke="#888" stroke-width="0.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+    <text x="200" y="50" class="dim">66.5 in (1690 mm)</text>
+    <line x1="15" y1="20" x2="15" y2="80" stroke="#888" stroke-width="0.5" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
+    <text x="8" y="55" class="dim2" transform="rotate(-90,8,55)">82.75 in (2102 mm)</text>
+    <text x="200" y="105" class="label" fill="#555">Material: 1/2 in (12 mm) OSB — Lightweight, no structural role</text>
+  </g>
+
+  <!-- Cutting note -->
+  <g transform="translate(560,590)">
+    <rect x="0" y="0" width="580" height="90" rx="8" fill="#e8f5e9" stroke="#66bb6a" stroke-width="1.5"/>
+    <text x="20" y="22" class="label" font-weight="bold" fill="#2e7d32">Cost-Saving OSB Selection Guide</text>
+    <text x="20" y="42" class="label" font-size="11">OSB is ~$35/sheet (3/4 in, 4×8 ft) vs. ~$60 for sanded plywood — saves ~$75 total.</text>
+    <text x="20" y="60" class="label" font-size="11">OSB is stronger in shear than plywood of equal thickness. Fine for a Murphy bed cabinet.</text>
+    <text x="20" y="78" class="label" font-size="11">For a smooth finish: prime with Zinsser BIN shellac primer, then paint. Or face with 1/4 in plywood skin.</text>
+  </g>
+</svg>

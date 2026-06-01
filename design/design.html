@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malm Queen + VEVOR Murphy Bed Kit — Cost-Optimized Design</title>
+<style>
+  :root {
+    --accent: #c86a2c;
+    --accent-light: #fdf6f0;
+    --border: #d4c8b8;
+    --text: #333;
+    --text-light: #666;
+    --bg: #fff;
+    --bg-alt: #faf8f4;
+    --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--font);
+    color: var(--text);
+    background: #f5f2ec;
+    line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  header {
+    background: linear-gradient(135deg, #1a3a1a 0%, #2d5a2d 50%, #1a3a1a 100%);
+    color: #fff; padding: 48px 0 36px; text-align: center;
+    border-bottom: 4px solid #4caf50;
+  }
+  header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  header .subtitle { font-size: 16px; color: #a8d8a8; }
+  header .meta { font-size: 13px; color: #78a878; margin-top: 8px; }
+  header .badge {
+    display: inline-block; background: #4caf50; color: #fff;
+    padding: 4px 12px; border-radius: 12px; font-size: 12px;
+    margin-top: 10px; font-weight: 600;
+  }
+  nav {
+    background: var(--bg); border-bottom: 1px solid var(--border);
+    padding: 16px 0; position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  nav ul {
+    list-style: none; display: flex; flex-wrap: wrap;
+    gap: 4px 16px; justify-content: center;
+  }
+  nav a {
+    color: var(--text-light); text-decoration: none; font-size: 13px;
+    padding: 2px 4px; border-radius: 3px;
+    transition: color .15s, background .15s;
+  }
+  nav a:hover { color: var(--accent); background: var(--accent-light); }
+  main { padding: 40px 0 60px; }
+  section {
+    background: var(--bg); border-radius: 8px;
+    border: 1px solid var(--border); padding: 32px;
+    margin-bottom: 32px;
+  }
+  h2 {
+    font-size: 22px; color: #1a3a1a; margin-bottom: 20px;
+    padding-bottom: 8px; border-bottom: 2px solid #4caf50;
+  }
+  h3 { font-size: 16px; color: var(--accent); margin: 20px 0 10px; }
+  h4 { font-size: 14px; color: var(--text); margin: 16px 0 8px; }
+  p { margin-bottom: 12px; }
+  .figure { margin: 24px 0; text-align: center; }
+  .figure svg, .figure img, .figure object {
+    max-width: 100%; height: auto;
+    border: 1px solid var(--border); border-radius: 6px; background: #fff;
+  }
+  .figure .caption {
+    margin-top: 8px; font-size: 13px; color: var(--text-light); font-style: italic;
+  }
+  table {
+    width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px;
+  }
+  th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  th {
+    background: #f5f2ec; font-weight: 600; color: #1a3a1a; font-size: 13px;
+  }
+  tr:hover { background: var(--bg-alt); }
+  .savings-row { background: #e8f5e9; }
+  ul, ol { margin: 8px 0 12px 20px; }
+  li { margin-bottom: 4px; }
+  code {
+    font-family: var(--mono); font-size: 13px; background: #f0ece6;
+    padding: 2px 6px; border-radius: 3px; color: #2c1810;
+  }
+  .callout {
+    background: var(--accent-light); border-left: 4px solid var(--accent);
+    padding: 16px 20px; margin: 16px 0;
+    border-radius: 0 6px 6px 0; font-size: 14px;
+  }
+  .callout strong { color: var(--accent); }
+  .callout-green {
+    background: #e8f5e9; border-left: 4px solid #4caf50;
+    padding: 16px 20px; margin: 16px 0;
+    border-radius: 0 6px 6px 0; font-size: 14px;
+  }
+  .callout-green strong { color: #2e7d32; }
+  .cost-col { text-align: right; white-space: nowrap; }
+  @media (max-width: 640px) {
+    header h1 { font-size: 22px; }
+    section { padding: 20px 16px; }
+    nav ul { gap: 2px 10px; }
+    nav a { font-size: 12px; }
+    table { font-size: 12px; }
+    th, td { padding: 6px 8px; }
+    .hide-mobile { display: none; }
+  }
+  .file-tree {
+    background: #1a1a1a; color: #ccc; padding: 16px 20px;
+    border-radius: 6px; font-family: var(--mono); font-size: 13px;
+    line-height: 1.8; margin: 16px 0;
+  }
+  .file-tree .dir { color: #69b0ff; }
+  .file-tree .file { color: #ccc; }
+  .file-tree .hl { color: #9c6; }
+  .price-total {
+    font-size: 15px; font-weight: bold; text-align: right;
+    padding: 12px 16px; background: #f5f2ec; border-radius: 6px; margin: 8px 0;
+  }
+  .savings-badge {
+    display: inline-block; background: #4caf50; color: #fff;
+    padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Malm Queen + VEVOR Murphy Bed Kit</h1>
+    <div class="subtitle">Cost-Optimized Design &mdash; OSB Cabinet + Direct Mount</div>
+    <div class="meta">Model YFHVQN246 &bull; Queen Vertical &bull; Room Ceiling 83.5 in &bull; June 2026</div>
+    <span class="badge">~$260-330 materials &mdash; saves ~$170 vs. plywood original</span>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#dimensions">1. Dimensions</a></li>
+    <li><a href="#overview">2. Overview</a></li>
+    <li><a href="#fig-assembly">Fig 1</a></li>
+    <li><a href="#fig-panels">Fig 2</a></li>
+    <li><a href="#fig-mounting">Fig 3</a></li>
+    <li><a href="#fig-exploded">Fig 4</a></li>
+    <li><a href="#fig-ceiling">Fig 5</a></li>
+    <li><a href="#fig-open">Fig 6</a></li>
+    <li><a href="#cost-summary">9. Savings</a></li>
+    <li><a href="#steps">10. Steps</a></li>
+    <li><a href="#shopping">11. Shopping List</a></li>
+    <li><a href="#constraints">13. Constraints</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+
+<!-- ============================================================ -->
+<!-- 1. KEY DIMENSIONS -->
+<!-- ============================================================ -->
+<section id="dimensions">
+<h2>1. Key Dimensions</h2>
+
+<h3>Room</h3>
+<table>
+  <tr><th>Measurement</th><th>US</th><th>Metric</th></tr>
+  <tr><td>Ceiling height</td><td>83.5 in</td><td>2121 mm</td></tr>
+  <tr><td>Above ceiling</td><td colspan="2">Attic / crawl space</td></tr>
+</table>
+
+<h3>VEVOR Murphy Bed Kit (Queen Vertical &mdash; YFHVQN246)</h3>
+<table>
+  <tr><th>Component</th><th>US</th><th>Metric</th></tr>
+  <tr><td>Cabinet internal (W &times; D &times; H)</td><td>65 1/8 &times; 15 1/4 &times; 82 3/4 in</td><td>1654 &times; 388 &times; 2102 mm</td></tr>
+  <tr><td>Cabinet external (3/4 in OSB)</td><td><strong>66.5 &times; 16 &times; 84.25 in</strong></td><td><strong>1690 &times; 406 &times; 2138 mm</strong></td></tr>
+  <tr><td>Kit bed frame (L &times; W)</td><td>81 3/4 &times; 64 3/8 in</td><td>2077 &times; 1634 mm</td></tr>
+  <tr><td>Queen mattress</td><td>60 &times; 80 in</td><td>1520 &times; 2030 mm</td></tr>
+  <tr><td>Max mattress weight</td><td>68 lb</td><td>31 kg</td></tr>
+  <tr><td>Total bed weight (frame + mattress)</td><td>202-209 lb</td><td>92-95 kg</td></tr>
+</table>
+
+<h3>IKEA Malm Bed Frame (Queen)</h3>
+<table>
+  <tr><th>Dimension</th><th>US</th><th>Metric</th></tr>
+  <tr><td>Overall length (with head/footboard)</td><td>83 1/8 in</td><td>2111 mm</td></tr>
+  <tr><td>Overall width</td><td>66 1/8 in</td><td>1680 mm</td></tr>
+  <tr><td><strong>Side rail (head/foot removed)</strong></td><td><strong>~79 1/2 in</strong></td><td><strong>~2020 mm</strong></td></tr>
+  <tr><td>Mattress platform width</td><td>59 7/8 in</td><td>1521 mm</td></tr>
+  <tr><td>Platform height off floor</td><td>8 1/4 in</td><td>210 mm</td></tr>
+</table>
+
+<h3>Ceiling Fit Analysis</h3>
+<table>
+  <tr><th>Component</th><th>Height</th><th>Result</th></tr>
+  <tr><td>Cabinet external (3/4 in OSB)</td><td><strong>84.25 in (2138 mm)</strong></td><td>Fits with minimal recess</td></tr>
+  <tr><td>Ceiling height</td><td>83.5 in (2121 mm)</td><td></td></tr>
+  <tr class="savings-row"><td><strong>Recess needed</strong></td><td><strong>0.65 in (17 mm)</strong></td><td><span class="savings-badge">No header required!</span></td></tr>
+  <tr><td>Malm side rail (stored vertical)</td><td>~79 1/2 in (~2020 mm)</td><td>Fits inside cabinet (82 3/4 in)</td></tr>
+</table>
+</section>
+
+<!-- ============================================================ -->
+<!-- 2. DESIGN OVERVIEW -->
+<!-- ============================================================ -->
+<section id="overview">
+<h2>2. Design Overview</h2>
+
+<p><strong>Approach:</strong> Build the Murphy cabinet using <strong>OSB (oriented strand board)</strong> panels for cost savings, and mount the Murphy <strong>Connect Brackets directly to the Malm side rails</strong> &mdash; eliminating the plywood adapter strips. The cabinet is only slightly taller than the ceiling, requiring a <strong>~5/8 in (17 mm) recess</strong> &mdash; a simple trim detail rather than a structural framing project.</p>
+
+<div class="callout-green">
+<strong>Bottom line:</strong> This design saves ~$170 vs. the original plan by using OSB instead of plywood, eliminating adapter strips and their hardware, and removing the need for a structural ceiling header. The bed is also lighter (better for gas springs) and simpler to build.
+</div>
+
+<h3>Why OSB?</h3>
+<ul>
+  <li><strong>Cost:</strong> 3/4 in OSB is ~$35/sheet vs. ~$60 for sanded plywood &mdash; saves ~$90-100 on sheet goods</li>
+  <li><strong>Strength:</strong> OSB has equivalent shear and compression strength to plywood at the same thickness</li>
+  <li><strong>Appearance:</strong> The cabinet interior is mostly hidden behind the bed. Visible faces can be primed with shellac-based primer (Zinsser BIN) and painted</li>
+</ul>
+
+<h3>Why Direct Mount (No Adapters)?</h3>
+<ul>
+  <li><strong>Weight:</strong> Eliminates ~5.5 lb (2.5 kg) of plywood strips and ~1 lb (0.5 kg) of bolts</li>
+  <li><strong>Cost:</strong> Saves ~$26 in M8 bolts, washers, nylock nuts</li>
+  <li><strong>Simplicity:</strong> Fewer parts, fewer holes to drill, fewer things to go wrong</li>
+  <li><strong>Safety:</strong> The 11 mm pivot pin carries the full vertical load in shear &mdash; particleboard handles this fine with pre-drilled pilot holes</li>
+</ul>
+
+<div class="callout">
+<strong>One trade-off:</strong> Drilling 11 mm holes in the Malm side rails is technically permanent. However, the holes are hidden inside the cabinet, and the bed can be returned to standalone use by filling them with wood filler + touch-up paint. The adapter strip approach remains available if you prefer full reversibility.
+</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FIGURES 1-6 -->
+<!-- ============================================================ -->
+<section id="fig-assembly">
+<h2>3. Figure 1: Overall Assembly</h2>
+<div class="figure">
+  <object data="diagrams/assembly.svg" type="image/svg+xml" width="100%" style="max-width:900px;display:block;margin:0 auto;">
+    <img src="diagrams/assembly.svg" alt="Overall assembly" style="max-width:100%">
+  </object>
+  <div class="caption">Front elevation (left) and side section (right) &mdash; OSB cabinet with 0.65 in ceiling recess.</div>
+</div>
+</section>
+
+<section id="fig-panels">
+<h2>4. Figure 2: Cabinet Panel Cutting Guide</h2>
+<div class="figure">
+  <object data="diagrams/panels.svg" type="image/svg+xml" width="100%" style="max-width:800px;display:block;margin:0 auto;">
+    <img src="diagrams/panels.svg" alt="Panel cutting guide" style="max-width:100%">
+  </object>
+  <div class="caption">All panels cut from OSB. 3/4 in for structure, 1/2 in for back panel. Savings: ~$100 vs. plywood.</div>
+</div>
+
+<h3>Panel Summary</h3>
+<table>
+  <tr><th>#</th><th>Description</th><th>US Dimensions</th><th>Metric</th><th>Material</th><th>Qty</th></tr>
+  <tr><td>1</td><td>Cabinet side</td><td>84 1/4 &times; 16 in</td><td>2138 &times; 406 mm</td><td>3/4 in OSB</td><td>2</td></tr>
+  <tr><td>2</td><td>Cabinet top</td><td>65 1/8 &times; 15 1/4 in</td><td>1654 &times; 388 mm</td><td>3/4 in OSB</td><td>1</td></tr>
+  <tr><td>3</td><td>Cabinet bottom</td><td>65 1/8 &times; 16 in</td><td>1654 &times; 406 mm</td><td>3/4 in OSB</td><td>1</td></tr>
+  <tr><td>4</td><td>Interior shelf</td><td>65 1/8 &times; 15 1/4 in</td><td>1654 &times; 388 mm</td><td>3/4 in OSB</td><td>1</td></tr>
+  <tr><td>5</td><td>Back panel</td><td>82 3/4 &times; 66.5 in</td><td>2102 &times; 1690 mm</td><td>1/2 in OSB</td><td>1</td></tr>
+</table>
+
+<h3>Mattress Support</h3>
+<p>Re-use the existing Malm slatted base (Luroy slats + SKORVA center beam) instead of cutting a 3/8 in plywood panel. The slats provide better mattress ventilation and are already the correct size.</p>
+</section>
+
+<section id="fig-mounting">
+<h2>5. Figure 3: Bracket Mounting Detail</h2>
+<div class="figure">
+  <object data="diagrams/mounting.svg" type="image/svg+xml" width="100%" style="max-width:800px;display:block;margin:0 auto;">
+    <img src="diagrams/mounting.svg" alt="Bracket mounting detail" style="max-width:100%">
+  </object>
+  <div class="caption">Side Bracket (A) on OSB cabinet / Connect Bracket (B) direct to Malm side rail &mdash; no adapter strips.</div>
+</div>
+
+<h3>Mechanism Components</h3>
+<table>
+  <tr><th>Part</th><th>Description</th><th>Fasteners</th></tr>
+  <tr><td>A &mdash; Side Bracket</td><td>Mounts to cabinet side (OSB)</td><td>Template 28 &times; 11 5/8 in (710&times;294 mm), screws I</td></tr>
+  <tr><td>B &mdash; Connect Bracket</td><td>Mounts directly to Malm side rail</td><td>Template 12 &times; 3 1/4 in (306&times;82 mm), screws I</td></tr>
+  <tr><td>C &mdash; Leg</td><td>Supports bed when horizontal</td><td>7/16 in pin + screws I</td></tr>
+  <tr><td>D &mdash; Gas Spring</td><td>Lifting assist</td><td>M8 threaded, Nut H</td></tr>
+  <tr><td>E &mdash; Mattress Strap</td><td>Secures mattress</td><td>Screw J (M4&times;20)</td></tr>
+  <tr><td>F &mdash; Bearing</td><td>Rides in Side Bracket track</td><td>Press-fit into B</td></tr>
+  <tr><td>G &mdash; Stopper</td><td>Limits bed travel</td><td>Screw J</td></tr>
+</table>
+</section>
+
+<section id="fig-exploded">
+<h2>6. Figure 4: Exploded View</h2>
+<div class="figure">
+  <object data="diagrams/exploded.svg" type="image/svg+xml" width="100%" style="max-width:800px;display:block;margin:0 auto;">
+    <img src="diagrams/exploded.svg" alt="Exploded view" style="max-width:100%">
+  </object>
+  <div class="caption">OSB cabinet, mechanism brackets, Malm side rails with slatted base &mdash; no adapter strips.</div>
+</div>
+</section>
+
+<section id="fig-ceiling">
+<h2>7. Figure 5: Ceiling Recess Framing Plan</h2>
+<div class="figure">
+  <object data="diagrams/ceiling.svg" type="image/svg+xml" width="100%" style="max-width:800px;display:block;margin:0 auto;">
+    <img src="diagrams/ceiling.svg" alt="Ceiling framing" style="max-width:100%">
+  </object>
+  <div class="caption">Rough opening: 67.5 &times; 18 in (1715 &times; 457 mm). Recess is only 0.65 in &mdash; no header needed!</div>
+</div>
+
+<div class="callout-green">
+<strong>No structural ceiling work required.</strong> The 0.65 in (17 mm) recess is purely a drywall/trim detail: cut drywall, add 2&times;4 blocking between joists for trim attachment, shim cabinet plumb, fasten through sides. No joist cutting, no header, no cripple studs.
+</div>
+</section>
+
+<section id="fig-open">
+<h2>8. Figure 6: Side View &mdash; Bed in Open Position</h2>
+<div class="figure">
+  <object data="diagrams/bed-open.svg" type="image/svg+xml" width="100%" style="max-width:800px;display:block;margin:0 auto;">
+    <img src="diagrams/bed-open.svg" alt="Bed open" style="max-width:100%">
+  </object>
+  <div class="caption">Bed horizontal: pivot point, gas spring, legs at 12 1/4 in ground clearance.</div>
+</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 9. COST OPTIMIZATION SUMMARY -->
+<!-- ============================================================ -->
+<section id="cost-summary">
+<h2>9. Cost Optimization Summary</h2>
+
+<table>
+  <tr><th>Item</th><th>Original (Plywood + Adapter)</th><th>Optimized (OSB + Direct Mount)</th><th>Savings</th></tr>
+  <tr>
+    <td>Cabinet panels</td>
+    <td>3/4 in sanded plywood (3 sheets) + 1/2 in plywood (1 sheet) + 3/8 in plywood (1 sheet)</td>
+    <td>3/4 in OSB (2 sheets) + 1/2 in OSB (1 sheet)</td>
+    <td><strong>~$100</strong></td>
+  </tr>
+  <tr>
+    <td>Ceiling header+framing</td>
+    <td>12 ft 2&times;6 + 40 ft 2&times;4 + drywall patch</td>
+    <td>2 &times; 2&times;4 blocking + trim</td>
+    <td><strong>~$37</strong></td>
+  </tr>
+  <tr>
+    <td>Adapter hardware</td>
+    <td>20 M8 bolts + 40 washers + 20 nylock nuts</td>
+    <td>None (direct mount)</td>
+    <td><strong>~$26</strong></td>
+  </tr>
+  <tr>
+    <td>Weight (adapter + bolts)</td>
+    <td>~6.5 lb added to bed</td>
+    <td>0 lb added</td>
+    <td><strong>Bed is lighter</strong></td>
+  </tr>
+  <tr>
+    <td>Ceiling recess</td>
+    <td>3.6 in (91 mm) &mdash; structural</td>
+    <td>0.65 in (17 mm) &mdash; trim only</td>
+    <td><strong>Much easier</strong></td>
+  </tr>
+  <tr style="background:#e8f5e9;font-weight:bold;">
+    <td>Total material cost</td>
+    <td>~$420-500</td>
+    <td>~$260-330</td>
+    <td><span style="color:#2e7d32;">~$130-170 saved</span></td>
+  </tr>
+</table>
+</section>
+
+<!-- ============================================================ -->
+<!-- 10. CONSTRUCTION STEPS -->
+<!-- ============================================================ -->
+<section id="steps">
+<h2>10. Construction Steps</h2>
+
+<h3>Phase 1: Ceiling Preparation</h3>
+<ol>
+  <li>Locate ceiling joists with stud finder, mark opening: ~67.5 &times; 18 in</li>
+  <li>Cut drywall, install 2&times;4 blocking between joists at opening perimeter</li>
+  <li>Confirm rough opening is square and level</li>
+</ol>
+
+<h3>Phase 2: Cabinet Construction</h3>
+<ol>
+  <li>Cut all OSB panels per Figure 2</li>
+  <li>Assemble cabinet box with 3 in deck screws + waterproof wood glue (Titebond III)</li>
+  <li>Verify internal: <strong>65 1/8 &times; 15 1/4 &times; 82 3/4 in</strong></li>
+  <li>Install interior shelf</li>
+  <li>Prime/paint visible surfaces with shellac-based primer (Zinsser BIN)</li>
+</ol>
+
+<h3>Phase 3: Side Bracket Installation</h3>
+<ol>
+  <li>Mount <strong>Side Brackets (A)</strong> using template <strong>28 &times; 11 5/8 in (710&times;294 mm)</strong></li>
+  <li>Drill 7/16 in (11 mm) pivot hole 5/8 in (15 mm) deep + 1/4 in locator hole</li>
+  <li>Fix brackets with screws I (M5&times;20 mm) from kit</li>
+</ol>
+
+<h3>Phase 4: Direct Mount Connect Brackets to Malm</h3>
+<ol>
+  <li>Remove Malm headboard and footboard</li>
+  <li>Clamp Connect Bracket template <strong>12 &times; 3 1/4 in (306&times;82 mm)</strong> to each Malm side rail</li>
+  <li>Transfer hole positions (1 pivot + screw holes)</li>
+  <li>Pre-drill pilot holes for screws (3/16 in / 4.5 mm bit)</li>
+  <li>Drill 7/16 in (11 mm) pivot hole through particleboard</li>
+  <li>Mount <strong>Connect Brackets (B)</strong> with screws I &mdash; dip screws in wood glue for grip</li>
+  <li>Press <strong>Bearings (F)</strong> into Connect Brackets</li>
+  <li>Attach <strong>Legs (C)</strong> near foot end &mdash; 12 1/4 in center-to-ground</li>
+  <li>Install <strong>Gas Springs (D)</strong> &mdash; turn end caps out, thread into Connect Brackets, secure with M8 nuts</li>
+</ol>
+
+<h3>Phase 5: Bed Frame Preparation</h3>
+<ol>
+  <li>Reattach Malm slatted base (Luroy slats) to side rails</li>
+  <li>Install SKORVA center support beam</li>
+  <li>Slide bed frame assembly into cabinet &mdash; Connect Brackets ride on Side Brackets</li>
+  <li>Close and test pivot motion</li>
+</ol>
+
+<h3>Phase 6: Final Assembly</h3>
+<ol>
+  <li>Attach <strong>Straps (E)</strong> with Screws J</li>
+  <li>Install <strong>Stoppers (G)</strong></li>
+  <li>Slide cabinet into ceiling opening</li>
+  <li>Shim plumb, fasten through sides into ceiling blocking with 3 in deck screws every 12 in</li>
+  <li>Install crown moulding or L-trim around ceiling perimeter</li>
+  <li>Place mattress (max 10 in, max 68 lb) and secure with straps</li>
+  <li>Test open/close cycle multiple times &mdash; adjust gas spring tension as needed</li>
+</ol>
+</section>
+
+<!-- ============================================================ -->
+<!-- 11. SHOPPING LIST -->
+<!-- ============================================================ -->
+<section id="shopping">
+<h2>11. Hardware Store Shopping List</h2>
+
+<h3>Sheet Goods (OSB)</h3>
+<table>
+  <tr><th>Item</th><th>Qty</th><th>Size</th><th>Purpose</th><th class="cost-col hide-mobile">Est. Cost</th></tr>
+  <tr>
+    <td>3/4 in OSB (4 &times; 8 ft)</td>
+    <td>2 sheets</td>
+    <td>48 &times; 96 &times; 23/32 in</td>
+    <td>Cabinet sides, top, bottom, shelf</td>
+    <td class="cost-col hide-mobile">~$70</td>
+  </tr>
+  <tr>
+    <td>1/2 in OSB (4 &times; 8 ft)</td>
+    <td>1 sheet</td>
+    <td>48 &times; 96 &times; 15/32 in</td>
+    <td>Back panel</td>
+    <td class="cost-col hide-mobile">~$25</td>
+  </tr>
+  <tr class="savings-row">
+    <td><strong>Plywood equivalent</strong></td>
+    <td>5 sheets</td>
+    <td colspan="2">Would cost ~$280 &mdash; you save ~$185</td>
+    <td class="cost-col hide-mobile"><strong>~$95</strong></td>
+  </tr>
+</table>
+
+<h3>Lumber &amp; Trim</h3>
+<table>
+  <tr><th>Item</th><th>Qty</th><th>Size</th><th>Purpose</th><th class="cost-col hide-mobile">Est. Cost</th></tr>
+  <tr><td>2&times;4 SPF stud</td><td>2</td><td>92 5/8 in (standard stud)</td><td>Ceiling blocking</td><td class="cost-col hide-mobile">~$8</td></tr>
+  <tr><td>Crown moulding or L-trim</td><td>14 ft</td><td>~2-3 in profile</td><td>Ceiling transition trim</td><td class="cost-col hide-mobile">~$20</td></tr>
+</table>
+
+<h3>Fasteners &amp; Hardware</h3>
+<table>
+  <tr><th>Item</th><th>Qty</th><th>Size</th><th>Purpose</th><th class="cost-col hide-mobile">Est. Cost</th></tr>
+  <tr><td>Deck screws</td><td>1 lb</td><td>#8 &times; 3 in</td><td>Cabinet assembly + cabinet-to-ceiling</td><td class="cost-col hide-mobile">~$10</td></tr>
+  <tr><td>Deck screws</td><td>1/2 lb</td><td>#8 &times; 1 1/4 in</td><td>Shelf installation</td><td class="cost-col hide-mobile">~$5</td></tr>
+  <tr><td>Waterproof wood glue</td><td>1 bottle</td><td>Titebond III</td><td>Cabinet assembly + screw grip</td><td class="cost-col hide-mobile">~$8</td></tr>
+  <tr><td>Drywall screws</td><td>1/2 lb</td><td>#6 &times; 1 5/8 in</td><td>Ceiling drywall replacement</td><td class="cost-col hide-mobile">~$5</td></tr>
+  <tr><td>Shims</td><td>1 pack</td><td>12 in cedar</td><td>Level cabinet in ceiling</td><td class="cost-col hide-mobile">~$5</td></tr>
+</table>
+
+<h3>Finishing Supplies</h3>
+<table>
+  <tr><th>Item</th><th>Qty</th><th>Purpose</th><th class="cost-col hide-mobile">Est. Cost</th></tr>
+  <tr><td>Shellac-based primer (Zinsser BIN)</td><td>1 qt</td><td>Prime OSB visible surfaces</td><td class="cost-col hide-mobile">~$15</td></tr>
+  <tr><td>Paint (to match room)</td><td>1 qt</td><td>Finish cabinet exterior</td><td class="cost-col hide-mobile">~$10</td></tr>
+</table>
+
+<h3>Tools (if not already owned)</h3>
+<table>
+  <tr><th>Item</th><th>Est. Cost</th><th>Notes</th></tr>
+  <tr><td>Circular saw or track saw</td><td>~$80-150</td><td>For OSB panel cutting</td></tr>
+  <tr><td>Jigsaw</td><td>~$40-60</td><td>Notch cuts for brackets</td></tr>
+  <tr><td>Power drill + bits</td><td>~$60-120</td><td>7/16 in (11 mm) wood bit needed</td></tr>
+  <tr><td>#10 (M5) countersink bit</td><td>~$10</td><td>For bracket screws</td></tr>
+  <tr><td>Stud finder</td><td>~$20</td><td>Locate ceiling joists</td></tr>
+  <tr><td>Level (4 ft)</td><td>~$25</td><td>Cabinet alignment</td></tr>
+  <tr><td>Clamps (2 &times; 36 in)</td><td>~$30</td><td>Hold template during drilling</td></tr>
+</table>
+
+<h3>From the VEVOR Kit (included)</h3>
+<table>
+  <tr><th>Item</th><th>Qty</th></tr>
+  <tr><td>Side Bracket (A)</td><td>2</td></tr>
+  <tr><td>Connect Bracket (B)</td><td>2</td></tr>
+  <tr><td>Leg (C)</td><td>2</td></tr>
+  <tr><td>Gas Spring (D) &mdash; YFGS5001100</td><td>2</td></tr>
+  <tr><td>Mattress Strap (E)</td><td>2</td></tr>
+  <tr><td>Bearing (F)</td><td>4</td></tr>
+  <tr><td>Stopper (G)</td><td>2</td></tr>
+  <tr><td>M8 nuts (H)</td><td>4</td></tr>
+  <tr><td>M5 &times; 20 mm screws (I)</td><td>72</td></tr>
+  <tr><td>M4 &times; 20 mm screws (J)</td><td>8</td></tr>
+  <tr><td>Drilling templates</td><td>2</td></tr>
+  <tr><td>13 mm wrench + 6 mm + 11 mm bits</td><td>1 set</td></tr>
+</table>
+
+<div class="price-total">Estimated hardware store total (not including tools): <span style="color:#2e7d32;">~$260-330</span></div>
+<div class="callout-green">
+<strong>Savings:</strong> This is ~$170 less than the original plywood+adapter design. If you need to buy tools, add ~$260-415. Lowe's and Home Depot both carry all items listed. Prices checked June 2026.
+</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 12. ASSEMBLY SEQUENCE -->
+<!-- ============================================================ -->
+<section id="sequence">
+<h2>12. Assembly Sequence (Quick Reference)</h2>
+<ol style="columns:2;column-gap:32px;">
+  <li>Cut ceiling drywall, install 2&times;4 blocking</li>
+  <li>Cut + assemble OSB cabinet</li>
+  <li>Mount Side Brackets (A) on cabinet</li>
+  <li>Mount Connect Brackets (B) directly to Malm rails</li>
+  <li>Press Bearings (F), attach Legs (C)</li>
+  <li>Install Gas Springs (D)</li>
+  <li>Reattach slatted base + SKORVA</li>
+  <li>Slide bed frame into cabinet</li>
+  <li>Test pivot motion</li>
+  <li>Shim + fasten cabinet in ceiling</li>
+  <li>Crown moulding</li>
+  <li>Mattress + straps + final test</li>
+</ol>
+</section>
+
+<!-- ============================================================ -->
+<!-- 13. CONSTRAINTS -->
+<!-- ============================================================ -->
+<section id="constraints">
+<h2>13. Key Constraints</h2>
+
+<table>
+  <tr><th>Constraint</th><th>Limit</th><th>Why</th></tr>
+  <tr><td>Mattress max weight</td><td>68 lb (31 kg)</td><td>Gas spring lift capacity</td></tr>
+  <tr><td>Mattress max thickness</td><td>10 in (254 mm)</td><td>Cabinet depth when folded</td></tr>
+  <tr><td>Mattress size</td><td>Queen &mdash; 60 &times; 80 in</td><td>Frame width + mechanism</td></tr>
+  <tr><td>Total bed weight</td><td>~205 lb (93 kg)</td><td>Gas spring pre-charge</td></tr>
+  <tr><td>Ceiling recess</td><td>~0.65 in (17 mm)</td><td>OSB cabinet minus ceiling height</td></tr>
+</table>
+
+<div class="callout">
+<strong>Mattress weight warning:</strong> The gas springs are calibrated for a total bed weight of <strong>202-209 lb (92-95 kg)</strong>. The Malm frame + slatted base + hardware weighs approximately <strong>60-70 lb (27-32 kg)</strong>. The lighter OSB cabinet saves ~5-8 lb vs. plywood. This leaves roughly <strong>130-145 lb (59-66 kg)</strong> for the mattress &mdash; but the kit explicitly states <strong>max mattress weight: 68 lb (31 kg)</strong>. Check your mattress weight before buying. Most standard queen mattresses under 10 in weigh <strong>40-60 lb</strong>. Ask for a "lightweight queen" or look for low-coil-count mattresses. If you exceed the limit, the gas springs won't lift properly.
+</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FILE INDEX -->
+<!-- ============================================================ -->
+<section id="files">
+<h2>File Index</h2>
+<div class="file-tree">
+<span class="dir">design/</span><br>
+<span class="hl">&#x251C;&#x2500;&#x2500; design.html</span><span class="file">  &larr; this file</span><br>
+<span class="hl">&#x251C;&#x2500;&#x2500; design.md</span><span class="file">  &larr; Markdown source</span><br>
+<span class="dir">&#x2514;&#x2500;&#x2500; diagrams/</span><br>
+<span class="file">    &#x251C;&#x2500;&#x2500; assembly.svg</span><br>
+<span class="file">    &#x251C;&#x2500;&#x2500; panels.svg</span><br>
+<span class="file">    &#x251C;&#x2500;&#x2500; mounting.svg</span><span class="file">  (replaces adapter.svg)</span><br>
+<span class="file">    &#x251C;&#x2500;&#x2500; exploded.svg</span><br>
+<span class="file">    &#x251C;&#x2500;&#x2500; ceiling.svg</span><br>
+<span class="file">    &#x2514;&#x2500;&#x2500; bed-open.svg</span><br>
+</div>
+</section>
+
+</main>
+
+<footer style="background:#1a3a1a;color:#78a878;text-align:center;padding:24px 0;font-size:13px;border-top:4px solid #4caf50;">
+  <div class="container">
+    Cost-optimized from VEVOR/BAGUO Murphy Bed Kit (YFHVQN246) + IKEA MALM Queen assembly instructions.<br>
+    Verify all measurements against your physical components before cutting.
+  </div>
+</footer>
+
+</body>
+</html>

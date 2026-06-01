@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" width="100%">
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; }
+      .dim { fill: #d32f2f; font-size: 11px; text-anchor: middle; }
+      .label { font-size: 10px; fill: #333; }
+      .hl { font-size: 10px; fill: #1565c0; font-weight: bold; }
+      .title { font-size: 16px; fill: #333; font-weight: bold; }
+      .subtitle { font-size: 12px; fill: #555; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#d32f2f"/>
+    </marker>
+    <marker id="arrow-sm" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <path d="M0,0 L6,2 L0,4 Z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="28" text-anchor="middle" class="title">Updated: Bracket Mounting — Direct to Malm Side Rail</text>
+  <text x="600" y="46" text-anchor="middle" class="subtitle">No adapter strips needed • Fully reversible via existing Malm bolt holes</text>
+
+  <!-- ───────── Detail A: Side Bracket (A) to OSB Cabinet Side ───────── -->
+  <text x="60" y="80" class="hl">Detail A: Side Bracket (A) mounted to OSB cabinet side (3/4 in / 18 mm)</text>
+
+  <!-- OSB side panel (cross-section) -->
+  <rect x="60" y="100" width="180" height="40" fill="#d4a76a" stroke="#333" stroke-width="1.5"/>
+  <text x="150" y="125" text-anchor="middle" class="label">3/4 in OSB Cabinet Side</text>
+  <text x="150" y="155" text-anchor="middle" class="dim" font-size="10">18 mm (23/32 in)</text>
+
+  <!-- Side Bracket -->
+  <rect x="240" y="95" width="30" height="50" fill="#999" stroke="#333" stroke-width="1.5"/>
+  <text x="255" y="125" text-anchor="middle" class="label" transform="rotate(-90,255,125)">Side Bracket (A)</text>
+
+  <!-- Pin hole in OSB -->
+  <circle cx="235" cy="120" r="5.5" fill="#333"/>
+  <text x="235" y="110" text-anchor="middle" class="label">15 mm deep</text>
+  <text x="235" y="170" text-anchor="middle" class="dim">pin hole</text>
+
+  <!-- M5 screw -->
+  <line x1="240" y1="140" x2="225" y2="140" stroke="#d32f2f" stroke-width="2" marker-start="url(#arrow-sm)"/>
+  <text x="210" y="138" text-anchor="end" class="label" font-size="9">M5×20 mm screw</text>
+
+  <text x="60" y="195" class="dim" font-size="10">Note: 15 mm hole depth leaves ~3 mm in 18 mm OSB. M5×20 screw penetrates ~17 mm — fine for OSB.</text>
+
+  <!-- ───────── Detail B: Connect Bracket (B) Direct to Malm ───────── -->
+  <text x="580" y="80" class="hl">Detail B: Connect Bracket (B) mounted directly to Malm side rail</text>
+
+  <!-- Malm side rail cross-section -->
+  <rect x="580" y="100" width="200" height="40" fill="#c8a87c" stroke="#555" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="680" y="125" text-anchor="middle" class="label">Malm Side Rail (particleboard)</text>
+  <text x="680" y="155" text-anchor="middle" class="dim" font-size="10">~5/8 in (16 mm) particleboard with foil finish</text>
+
+  <!-- Connect Bracket -->
+  <rect x="780" y="95" width="25" height="50" fill="#999" stroke="#333" stroke-width="1.5"/>
+  <text x="792" y="125" text-anchor="middle" class="label" transform="rotate(-90,792,125)">Connect Bracket (B)</text>
+
+  <!-- Pin through both -->
+  <line x1="775" y1="115" x2="800" y2="115" stroke="#333" stroke-width="3"/>
+  <circle cx="775" cy="115" r="5.5" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="775" y="108" text-anchor="middle" class="label">11 mm pin</text>
+  <text x="775" y="175" text-anchor="middle" class="dim">through particleboard</text>
+
+  <!-- M5 screws into particleboard -->
+  <line x1="780" y1="135" x2="770" y2="135" stroke="#d32f2f" stroke-width="2" marker-start="url(#arrow-sm)"/>
+  <text x="760" y="133" text-anchor="end" class="label" font-size="9">M5×20 mm screws</text>
+
+  <text x="580" y="195" class="dim" font-size="10">The pin carries vertical (shear) load; screws just prevent rotation. Pre-drill pilot holes. Add wood glue for grip.</text>
+
+  <!-- ───────── Full Cross-Section Assembly ───────── -->
+  <text x="60" y="240" class="hl">Section View: OSB Cabinet → Direct Mount to Malm (Plan View)</text>
+
+  <!-- Full assembly cross-section -->
+  <rect x="60" y="260" width="60" height="100" fill="#d4a76a" stroke="#333" stroke-width="1.5"/>
+  <text x="90" y="315" text-anchor="middle" class="label" transform="rotate(-90,90,315)">Cabinet Side (OSB)</text>
+
+  <rect x="120" y="260" width="300" height="100" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="270" y="315" text-anchor="middle" class="label">Cabinet Interior</text>
+  <text x="270" y="330" text-anchor="middle" class="label">Mattress Platform</text>
+
+  <rect x="420" y="265" width="70" height="90" fill="#c8a87c" stroke="#555" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="455" y="315" text-anchor="middle" class="label" transform="rotate(-90,455,315)">Malm Rail</text>
+
+  <!-- Brackets -->
+  <rect x="114" y="275" width="14" height="70" fill="#999" stroke="#333" stroke-width="1"/>
+  <text x="107" y="315" text-anchor="end" class="label" font-size="8">Side Bracket (A)</text>
+
+  <rect x="406" y="275" width="14" height="70" fill="#999" stroke="#333" stroke-width="1"/>
+  <text x="424" y="315" text-anchor="start" class="label" font-size="8">Connect Bracket (B)</text>
+
+  <!-- Pin callout -->
+  <line x1="414" y1="290" x2="420" y2="290" stroke="#333" stroke-width="2"/>
+  <text x="340" y="285" text-anchor="middle" class="dim" font-size="9">11 mm pivot pin through Malm rail</text>
+
+  <!-- Dimensions -->
+  <line x1="60" y1="250" x2="490" y2="250" stroke="#888" stroke-width="0.5" marker-start="url(#arrow-sm)" marker-end="url(#arrow-sm)"/>
+  <text x="275" y="247" text-anchor="middle" class="dim" font-size="10">Total width: 66.5 in (1690 mm)</text>
+
+  <!-- Callout box -->
+  <rect x="560" y="260" width="580" height="130" rx="8" fill="#fffbe6" stroke="#e0c84a" stroke-width="1.5"/>
+  <text x="650" y="282" class="hl">Cost &amp; Weight Savings vs. Adapter Strip Design</text>
+  <text x="575" y="302" class="label" font-size="11">• Eliminates 2 plywood adapter strips (~5.5 lb / 2.5 kg total)</text>
+  <text x="575" y="322" class="label" font-size="11">• Eliminates 20 M8 bolts, washers, nuts (~$26, ~1 lb / 0.5 kg)</text>
+  <text x="575" y="342" class="label" font-size="11">• Reduces cabinet external height by 2.9 in (74 mm) — ceiling recess drops to 5/8 in (17 mm)!</text>
+  <text x="575" y="362" class="label" font-size="11">• Simpler construction, fewer parts, lighter lift load on gas springs</text>
+  <text x="575" y="382" class="label" font-size="11">• Downside: drill into Malm (hidden by cabinet; bed above head, hard to see)</text>
+
+</svg>

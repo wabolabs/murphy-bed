@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%">
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; }
+      .dim { fill: #d32f2f; font-size: 11px; text-anchor: middle; }
+      .label { font-size: 10px; fill: #333; }
+      .title { font-size: 16px; fill: #333; font-weight: bold; }
+      .subtitle { font-size: 12px; fill: #555; }
+      .hl { font-size: 10px; fill: #1565c0; font-weight: bold; }
+    </style>
+  </defs>
+
+  <text x="600" y="28" text-anchor="middle" class="title">Exploded View — Cost-Optimized Design</text>
+  <text x="600" y="46" text-anchor="middle" class="subtitle">OSB cabinet panels + Direct mount to Malm side rails (no adapter strips)</text>
+
+  <!-- ── Row 1: Cabinet panels ── -->
+  <text x="600" y="72" text-anchor="middle" class="hl">CABINET (OSB)</text>
+
+  <!-- Back panel -->
+  <rect x="350" y="82" width="300" height="55" rx="3" fill="#dbcca8" stroke="#333" stroke-width="1.5"/>
+  <text x="500" y="115" text-anchor="middle" class="label">6 — Back Panel – 1/2 in OSB (66.5 × 82.75 in)</text>
+
+  <!-- Left side -->
+  <rect x="120" y="140" width="45" height="400" rx="3" fill="#d4a76a" stroke="#333" stroke-width="1.5"/>
+  <text x="142" y="345" text-anchor="middle" class="label" transform="rotate(-90,142,345)">1 — Left Side – 3/4 in OSB</text>
+
+  <!-- Right side -->
+  <rect x="830" y="140" width="45" height="400" rx="3" fill="#d4a76a" stroke="#333" stroke-width="1.5"/>
+  <text x="852" y="345" text-anchor="middle" class="label" transform="rotate(-90,852,345)">2 — Right Side – 3/4 in OSB</text>
+
+  <!-- Top -->
+  <rect x="170" y="140" width="655" height="45" rx="3" fill="#d4a76a" stroke="#333" stroke-width="1.5"/>
+  <text x="497" y="166" text-anchor="middle" class="label">3 — Top Panel – 3/4 in OSB</text>
+
+  <!-- Bottom -->
+  <rect x="170" y="500" width="655" height="45" rx="3" fill="#d4a76a" stroke="#333" stroke-width="1.5"/>
+  <text x="497" y="526" text-anchor="middle" class="label">4 — Bottom Panel – 3/4 in OSB</text>
+
+  <!-- Shelf -->
+  <rect x="170" y="310" width="655" height="45" rx="3" fill="#d4a76a" stroke="#333" stroke-width="1.5"/>
+  <text x="497" y="336" text-anchor="middle" class="label">5 — Shelf – 3/4 in OSB</text>
+
+  <!-- ── Row 2: Bed frame (Malm) ── -->
+  <text x="600" y="588" text-anchor="middle" class="hl">BED FRAME (IKEA MALM)</text>
+
+  <!-- Malm side rails -->
+  <rect x="300" y="600" width="35" height="80" rx="3" fill="#c8a87c" stroke="#555" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="317" y="645" text-anchor="middle" class="label" transform="rotate(-90,317,645)" font-size="9">Malm Side Rail</text>
+
+  <rect x="665" y="600" width="35" height="80" rx="3" fill="#c8a87c" stroke="#555" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="682" y="645" text-anchor="middle" class="label" transform="rotate(-90,682,645)" font-size="9">Malm Side Rail</text>
+
+  <!-- Connect Brackets (B) on Malm rails -->
+  <rect x="335" y="615" width="12" height="50" fill="#999" stroke="#333" stroke-width="1"/>
+  <text x="348" y="645" text-anchor="start" class="label" font-size="8">B</text>
+
+  <rect x="655" y="615" width="12" height="50" fill="#999" stroke="#333" stroke-width="1"/>
+  <text x="668" y="645" text-anchor="end" class="label" font-size="8">B</text>
+
+  <!-- Side brackets on cabinet sides -->
+  <rect x="159" y="240" width="12" height="50" fill="#999" stroke="#333" stroke-width="1"/>
+  <text x="160" y="300" class="label" font-size="8">A</text>
+
+  <rect x="830" y="240" width="12" height="50" fill="#999" stroke="#333" stroke-width="1"/>
+  <text x="833" y="300" class="label" font-size="8">A</text>
+
+  <!-- Callout: no adapter strips -->
+  <g transform="translate(380,600)">
+    <rect x="0" y="0" width="280" height="60" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="1.5"/>
+    <text x="10" y="18" class="label" font-weight="bold" fill="#e65100">No Adapter Strips!</text>
+    <text x="10" y="34" class="label" font-size="10">Connect Brackets (B) mount directly to</text>
+    <text x="10" y="50" class="label" font-size="10">Malm side rails via 11 mm pivot pin + M5 screws.</text>
+  </g>
+
+  <!-- Labels -->
+  <text x="85" y="255" class="label" fill="#666">A. Side Bracket</text>
+  <text x="85" y="270" class="label" fill="#666">(on cabinet side)</text>
+  <text x="930" y="255" class="label" fill="#666">A. Side Bracket</text>
+  <text x="930" y="270" class="label" fill="#666">(on cabinet side)</text>
+  <text x="355" y="608" class="label" fill="#666">B. Connect Bracket</text>
+  <text x="640" y="608" class="label" fill="#666">B. Connect Bracket</text>
+
+  <!-- Dimension callout for cabinet -->
+  <line x1="120" y1="550" x2="875" y2="550" stroke="#888" stroke-width="0.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="497" y="565" class="dim">External cabinet width: 66.5 in (1690 mm)</text>
+</svg>

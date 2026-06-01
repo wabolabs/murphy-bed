@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%">
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; }
+      .dim { fill: #d32f2f; font-size: 11px; text-anchor: middle; }
+      .dim2 { fill: #1565c0; font-size: 11px; text-anchor: middle; }
+      .label { font-size: 10px; fill: #333; }
+      .title { font-size: 16px; fill: #333; font-weight: bold; }
+      .subtitle { font-size: 12px; fill: #555; }
+      .hl { font-size: 10px; fill: #1565c0; font-weight: bold; }
+    </style>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6Z" fill="#d32f2f"/>
+    </marker>
+  </defs>
+
+  <text x="600" y="28" text-anchor="middle" class="title">Updated: Cabinet Assembly — OSB Panels, Direct Mount, Minimum Ceiling Recess</text>
+  <text x="600" y="46" text-anchor="middle" class="subtitle">External: 66.5 W × 16 D × 84.25 H in (1690 × 406 × 2138 mm) • Ceiling recess: only 5/8 in (17 mm)</text>
+
+  <!-- ─────────── Front Elevation ─────────── -->
+  <text x="260" y="72" text-anchor="middle" class="hl">Front Elevation</text>
+
+  <!-- Ceiling -->
+  <rect x="60" y="85" width="420" height="16" fill="#ccc" stroke="#333" stroke-width="1"/>
+  <text x="270" y="97" text-anchor="middle" class="label">Ceiling (2121 mm / 83.5 in)</text>
+
+  <!-- Cabinet body -->
+  <rect x="100" y="101" width="340" height="580" fill="none" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="101" width="340" height="580" fill="#d4a76a" opacity="0.3"/>
+
+  <!-- Top panel -->
+  <rect x="100" y="101" width="340" height="16" fill="#d4a76a" stroke="#333" stroke-width="1"/>
+  <text x="270" y="114" text-anchor="middle" class="label">Top — 3/4 in OSB</text>
+
+  <!-- Bottom panel -->
+  <rect x="100" y="665" width="340" height="16" fill="#d4a76a" stroke="#333" stroke-width="1"/>
+  <text x="270" y="692" text-anchor="middle" class="label">Bottom — 3/4 in OSB</text>
+
+  <!-- Side panels (indicated by left/right edges) -->
+  <rect x="100" y="117" width="16" height="548" fill="#d4a76a" stroke="#333" stroke-width="1"/>
+  <text x="108" y="395" text-anchor="middle" class="label" transform="rotate(-90,108,395)">Left Side — 3/4 in OSB</text>
+
+  <rect x="424" y="117" width="16" height="548" fill="#d4a76a" stroke="#333" stroke-width="1"/>
+  <text x="432" y="395" text-anchor="middle" class="label" transform="rotate(-90,432,395)">Right Side — 3/4 in OSB</text>
+
+  <!-- Shelf -->
+  <rect x="116" y="270" width="308" height="16" fill="#d4a76a" stroke="#333" stroke-width="1"/>
+  <text x="270" y="283" text-anchor="middle" class="label">Shelf — 3/4 in OSB</text>
+
+  <!-- Recess gap -->
+  <line x1="60" y1="95" x2="60" y2="115" stroke="#888" stroke-width="0.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="50" y="108" class="dim" text-anchor="end">0.65 in (17 mm) recess</text>
+
+  <!-- Cabinet height -->
+  <line x1="36" y1="101" x2="36" y2="681" stroke="#888" stroke-width="0.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="28" y="395" class="dim" transform="rotate(-90,28,395)">84.25 in (2138 mm)</text>
+
+  <!-- Cabinet width -->
+  <line x1="100" y1="720" x2="440" y2="720" stroke="#888" stroke-width="0.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="270" y="733" class="dim">66.5 in (1690 mm)</text>
+
+  <!-- Ceiling height -->
+  <text x="180" y="96" class="dim" font-size="9">83.5 in ceiling</text>
+
+  <!-- Floor -->
+  <rect x="60" y="681" width="420" height="6" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="270" y="700" text-anchor="middle" class="label">Floor</text>
+
+  <!-- ─────────── Side Section ─────────── -->
+  <text x="820" y="72" text-anchor="middle" class="hl">Side Section</text>
+
+  <!-- Ceiling -->
+  <rect x="580" y="85" width="440" height="16" fill="#ccc" stroke="#333" stroke-width="1"/>
+
+  <!-- OSB cabinet side -->
+  <rect x="620" y="101" width="340" height="580" fill="none" stroke="#333" stroke-width="2"/>
+  <rect x="620" y="101" width="16" height="580" fill="#d4a76a" stroke="#333" stroke-width="1"/>
+  <text x="628" y="395" text-anchor="middle" class="label" transform="rotate(-90,628,395)">Cabinet Side (OSB)</text>
+
+  <!-- Back panel -->
+  <rect x="944" y="101" width="16" height="580" fill="#dbcca8" stroke="#333" stroke-width="1"/>
+  <text x="952" y="395" text-anchor="middle" class="label" transform="rotate(-90,952,395)">Back (1/2 in OSB)</text>
+
+  <!-- Top / Bottom -->
+  <rect x="636" y="101" width="308" height="16" fill="#d4a76a" stroke="#333" stroke-width="1"/>
+  <rect x="636" y="665" width="308" height="16" fill="#d4a76a" stroke="#333" stroke-width="1"/>
+
+  <!-- Malm rail inside -->
+  <rect x="830" y="160" width="16" height="400" fill="#c8a87c" stroke="#555" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="838" y="395" text-anchor="middle" class="label" transform="rotate(-90,838,395)">Malm Side Rail</text>
+
+  <!-- Brackets -->
+  <rect x="636" y="240" width="14" height="60" fill="#999" stroke="#333" stroke-width="1"/>
+  <text x="643" y="275" text-anchor="middle" class="label" font-size="8">A</text>
+  <text x="670" y="275" class="label" font-size="8" fill="#666">Side Bracket</text>
+
+  <rect x="816" y="240" width="14" height="60" fill="#999" stroke="#333" stroke-width="1"/>
+  <text x="823" y="275" text-anchor="middle" class="label" font-size="8">B</text>
+  <text x="795" y="275" class="label" font-size="8" fill="#666" text-anchor="end">Connect Bracket</text>
+
+  <!-- Depth dimension -->
+  <line x1="580" y1="690" x2="960" y2="690" stroke="#888" stroke-width="0.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="770" y="703" class="dim">16 in (406 mm)</text>
+
+  <!-- Recess detail -->
+  <line x1="560" y1="90" x2="560" y2="114" stroke="#888" stroke-width="0.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="550" y="105" class="dim" text-anchor="end">0.65 in (17 mm) recess</text>
+
+</svg>

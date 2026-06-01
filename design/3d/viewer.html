@@ -239,6 +239,33 @@ function showView(viewName) {
   currentView = viewName;
 }
 
+// ── Expose for headless screenshot automation ──
+window.__cam = { camera, controls, scene };
+window.__showView = showView;
+window.__setView = function(viewName, azimuth, elevation, distMult) {
+  showView(viewName);
+  requestAnimationFrame(() => {
+    const g = groups[viewName];
+    if (!g) return;
+    const box = new THREE.Box3().setFromObject(g);
+    const center = box.getCenter(new THREE.Vector3());
+    const size = box.getSize(new THREE.Vector3());
+    const maxDim = Math.max(size.x, size.y, size.z);
+    const dist = maxDim * 1.8 * (distMult || 1.0);
+    const phi = azimuth || 0;
+    const theta = Math.PI / 2 - (elevation || 0.4);
+    camera.position.set(
+      center.x + dist * Math.sin(theta) * Math.sin(phi),
+      center.y + dist * Math.cos(theta),
+      center.z + dist * Math.sin(theta) * Math.cos(phi)
+    );
+    camera.lookAt(center);
+    controls.target.copy(center);
+    controls.update();
+  });
+};
+window.__waitForLoad = loadAll;
+
 // ── Init ──
 loadAll().then(() => {
   showView('open');
